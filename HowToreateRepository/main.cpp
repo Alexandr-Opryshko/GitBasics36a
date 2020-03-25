@@ -1,4 +1,5 @@
 #include"Function.h"
+#include"Template.cpp"
 //Git Branches
 
 void main() {
