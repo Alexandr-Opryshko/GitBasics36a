@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<string>
 
 const int ROWS = 10;
 const int COLS = 10;
