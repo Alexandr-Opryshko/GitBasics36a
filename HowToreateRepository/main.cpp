@@ -2,7 +2,16 @@
 #include"Template.cpp"
 //Git Branches
 
+
 void main() {
+	setlocale(LC_ALL, "");
+
+	int factorial;
+	Print("Для вычисления Факториала введите целое число от 0 до 10 ");
+	std::cin >> factorial; std::cout << std::endl;
+	Print(CalcFactorial(factorial));
+	//std::cout << CalcFactorial(factorial) << std::endl;
+
 	const int n = 5;
 	int arrInt[n];
 	FillRand(arrInt, n);
