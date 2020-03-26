@@ -9,8 +9,13 @@ void main() {
 	int factorial;
 	Print("Для вычисления Факториала введите целое число от 0 до 10 ");
 	std::cin >> factorial; std::cout << std::endl;
-	Print("Факториал числа равен ");
-	Print(CalcFactorial(factorial));
+	if (factorial > 10) {
+		Print("Ведено число больше разрешенного");
+	}
+	else {
+		Print("Факториал числа равен ");
+		Print(CalcFactorial(factorial));
+	}
 
 	const int n = 5;
 	int arrInt[n];

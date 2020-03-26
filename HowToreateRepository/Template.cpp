@@ -1,6 +1,7 @@
 #include"Function.h"
 
 template<typename T>T CalcFactorial(T factorial) {
+
 	if (factorial <= 0) {
 		return 0;
 	}
