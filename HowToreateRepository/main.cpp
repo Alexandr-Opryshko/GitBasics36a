@@ -29,9 +29,11 @@ template<typename T>void Swap_2(T* a, T* b, T* c) {
 }
 void main() {
 	setlocale(LC_ALL, "");
-	int a = 5;
-	int b = 10;
-	int c = 20;
+	int* parr = new int;				// создадим динамический массив
+
+	int a = 5;							// обычная переменная
+	int b = 10;							// обычная переменная
+	int c = 20;							// обычная переменная
 
 	int* pa = &a;						// указатель на переменную (указывает на адрес переменной)
 	int& aRef = a;						// ссылка на значение переменной (ссылается на значение переменной
@@ -53,4 +55,10 @@ void main() {
 
 	Swap_2(pa, pb, pc);
 	std::cout << "a = " << a << "\tb = " << b << "\tc = " << c << std::endl;
+
+	std::cout << "Вывод arr - " << parr << std::endl;
+	std::cout << "Вывод arr - " << *parr << std::endl;
+	*parr = 10;											// зададим размер динамического массива
+	std::cout << "Вывод arr - " << *parr << std::endl;
+	delete parr;										// очистка мусора
 }
