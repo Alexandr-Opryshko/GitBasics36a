@@ -1,31 +1,56 @@
-#include"Function.h"
-#include"Template.cpp"
+#include<iostream>
+
 //Git Branches
 
+
+// функция принимает значение по ссылке
+template<typename T>void Swap(T& a, T& b, T& c) {
+	a = a + b;
+	b = a - b;
+	a = a - b;
+
+	a = a + c;
+	c = a - c;
+	a = a - c;
+
+	return;
+}
+// функция принимает значение по указателю (обязательно разименование)
+template<typename T>void Swap_2(T* a, T* b, T* c) {
+	*a = *a + *b;
+	*b = *a - *b;
+	*a = *a - *b;
+
+	*a = *a + *c;
+	*c = *a - *c;
+	*a = *a - *c;
+
+	return;
+}
 void main() {
-	const int n = 5;
-	int arrInt[n];
-	FillRand(arrInt, n);
-	Print(arrInt, n);
-	Sort(arrInt, n);
-	Print(arrInt, n);
+	setlocale(LC_ALL, "");
+	int a = 5;
+	int b = 10;
+	int c = 20;
 
-	const int m = 8;
-	double arrDb[m];
-	FillRand(arrDb, m);
-	Print(arrDb, m);
-	Sort(arrDb, m);
-	Print(arrDb, m);
+	int* pa = &a;						// указатель на переменную (указывает на адрес переменной)
+	int& aRef = a;						// ссылка на значение переменной (ссылается на значение переменной
 
-	int arrToInt[ROWS][COLS];
-	FillRand(arrToInt, ROWS, COLS);
-	Print(arrToInt, ROWS, COLS);
-	Sort(arrToInt, ROWS, COLS);
-	Print(arrToInt, ROWS, COLS);
+	int* pb = &b;						// указатель на переменную (указывает на адрес переменной)
+	int& bRef = b;						// ссылка на значение переменной (ссылается на значение переменной
 
-	double arrToDb[ROWS][COLS];
-	FillRand(arrToDb, ROWS, COLS);
-	Print(arrToDb, ROWS, COLS);
-	Sort(arrToDb, ROWS, COLS);
-	Print(arrToDb, ROWS, COLS);
+	int* pc = &c;						// указатель на переменную (указывает на адрес переменной)
+	int& cRef = c;						// ссылка на значение переменной (ссылается на значение переменной
+
+	std::cout << "Вывод a - " << a << std::endl;
+	std::cout << "Вывод &a - " << &a << std::endl;
+	std::cout << "Вывод *pa - " << pa << std::endl;
+	std::cout << "Вывод &aRef - " << aRef << std::endl;
+
+	std::cout << "a = " << a << "\tb = " << b << "\tc = " << c << std::endl;
+	Swap(aRef, bRef, cRef);
+	std::cout << "a = " << a << "\tb = " << b << "\tc = " << c << std::endl;
+
+	Swap_2(pa, pb, pc);
+	std::cout << "a = " << a << "\tb = " << b << "\tc = " << c << std::endl;
 }
