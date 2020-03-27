@@ -1,8 +1,13 @@
 #include"Function.h"
 
+template<typename T>void CalcFactorial(T factorial){
+//	if ((factorial <= 0) || (factorial == 1))  return 1; CalcFactorial(factorial);
+	return ((factorial <= 0) || (factorial == 1)) ? 1 : CalcFactorial(factorial);
+}
+/*
 template<typename T>T CalcFactorial(T factorial) {
 	if (factorial <= 0) {
-		return 0;
+		return 1;
 	}
 	else if (factorial == 1) {
 		return 1;
@@ -10,6 +15,15 @@ template<typename T>T CalcFactorial(T factorial) {
 	else {
 		return factorial * CalcFactorial(factorial - 1);
 	}
+}
+*/
+template<typename T>void elevator(T floor) {
+	if (floor == 0) {
+		return;
+	}
+	Print(floor);
+	elevator(floor - 1);
+	Print(floor);
 }
 
 template<typename T>void ResaltValue(T data) {
