@@ -3,3 +3,4 @@
 
 
 double Power(int num, int exp);
+void Fibanachi(int i);
