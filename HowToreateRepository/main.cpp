@@ -24,10 +24,12 @@ void main() {
 			return;
 		}
 		else if (temp == 'X') {
+			setlocale(LC_ALL, "");
 			std::cout << "Победил участник 1 - X" << std::endl;
 			return;
 		}
 		else if (temp == 'O') {
+			setlocale(LC_ALL, "");
 			std::cout << "Победил участник 2 - O" << std::endl;
 			return;
 		}
