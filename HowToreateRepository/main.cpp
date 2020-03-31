@@ -1,20 +1,25 @@
 #include"Function.h"
+
+
 //Git Branches
 
 
-void main() {
-	setlocale(LC_ALL, "");
 
-	int num;
-	int exp;
-	std::cout << "Введите число - ";
-	std::cin >> num; std::cout << std::endl;
-	std::cout << "Введите степень числа - ";
-	std::cin >> exp; std::cout << std::endl;
-	std::cout << Power(num, exp) << std::endl;
-/*
-	std::cout << "Введите число - ";
-	std::cin >> num; std::cout << std::endl;
-	Fibanachi(num);
-	*/
+void main() {
+	char sumbol;
+	int booton;
+	int counter = 0;
+	char arrCh[Y][X] = {};
+	Grid(arrCh);
+	while (true) {
+		booton = _getch();
+		counter++ % 2 == 0 ? sumbol = 'X' : sumbol = 'O';
+		Coordinates(booton, sumbol, arrCh);
+		Grid(arrCh);
+		if (EndGame(arrCh) == false) {
+			setlocale(LC_ALL, "");
+			std::cout << "Ничья" << std::endl;
+			return;
+		}
+	}
 }
