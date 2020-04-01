@@ -12,9 +12,4 @@ void main() {
 	std::cout << "¬ведите степень числа - ";
 	std::cin >> exp; std::cout << std::endl;
 	std::cout << Power(num, exp) << std::endl;
-/*
-	std::cout << "¬ведите число - ";
-	std::cin >> num; std::cout << std::endl;
-	Fibanachi(num);
-	*/
 }

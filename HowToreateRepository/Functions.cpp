@@ -9,7 +9,3 @@ double Power(int num, int exp) {
 	return (exp != 0) ? result *= Power(num, exp) : result;
 	*/
 }
-
-void Fibanachi(int i) {
-
-}
